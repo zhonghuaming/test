@@ -1,0 +1,10 @@
+externalAccess:
+  autoDiscovery:
+    enabled: true
+  enabled: true
+  service:
+    type: NodePort
+rbac:
+  create: true
+serviceAccount:
+  create: true

@@ -1,0 +1,122 @@
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <parent>
+        <groupId>org.apache</groupId>
+        <artifactId>apache</artifactId>
+        <version>20</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cn.huaming</groupId>
+    <artifactId>parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <name>zhm</name>
+    <packaging>pom</packaging>
+    <url>https://www.huaming.cn</url>
+    <inceptionYear>2021</inceptionYear>
+
+
+    <modules>
+
+    </modules>
+
+    <properties>
+
+        <spring-cloud.version>Hoxton.SR11</spring-cloud.version>
+        <spring.cloud.alibaba.version>2.2.6.RELEASE</spring.cloud.alibaba.version>
+        <spring.boot.version>2.3.10.RELEASE</spring.boot.version>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <hadoop.version>2.4.1</hadoop.version>
+        <guava.version>18.0</guava.version>
+        <target.java.version>1.8</target.java.version>
+        <slf4j.version>1.7.15</slf4j.version>
+        <log4j.version>2.14.1</log4j.version>
+        <flink.version>1.14.0</flink.version>
+        <flink.shaded.version>14.0</flink.shaded.version>
+        <flink.shaded.jackson.version>2.12.4</flink.shaded.jackson.version>
+
+        <target.java.version>8</target.java.version>
+        <maven.compiler.source>${target.java.version}</maven.compiler.source>
+        <maven.compiler.target>${target.java.version}</maven.compiler.target>
+        <packaging>pom</packaging>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <scala.binary.version>2.11</scala.binary.version>
+        <fastjson.version>1.2.78</fastjson.version>
+        <lombok.version>1.18.22</lombok.version>
+    </properties>
+
+
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring.cloud.alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <!--jdk配置-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <!--	<distributionManagement>-->
+    <!--		<repository>-->
+    <!--			<id>releases</id>-->
+    <!--			<name>Nexus Release Repository</name>-->
+    <!--			<url>https://maven.shencom.cn/repository/maven-releases/</url>-->
+    <!--		</repository>-->
+    <!--		<snapshotRepository>-->
+    <!--			<id>snapshots</id>-->
+    <!--			<name>Nexus Snapshot Repository</name>-->
+    <!--			<url>https://maven.shencom.cn/repository/maven-snapshots/</url>-->
+    <!--		</snapshotRepository>-->
+    <!--	</distributionManagement>-->
+</project>
