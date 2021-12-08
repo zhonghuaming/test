@@ -42,7 +42,7 @@ import static org.apache.commons.lang3.time.DateUtils.MILLIS_PER_SECOND;
  */
 
 @Slf4j
-public class TopTest {
+public class TopNTest {
 
     private static final FastDateFormat instance = FastDateFormat.getInstance("yyyy-MM-dd HH:mm:ss");
 
